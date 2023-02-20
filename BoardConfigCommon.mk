@@ -48,6 +48,7 @@ BOARD_KERNEL_CMDLINE += firmware_class.path=/data/vendor/param/firmware
 BOARD_BOOTCONFIG += androidboot.hardware=qcom
 BOARD_BOOTCONFIG += androidboot.memcg=1
 BOARD_BOOTCONFIG += androidboot.usbcontroller=a600000.dwc3
+BOARD_BOOTCONFIG += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -129,8 +130,8 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/device_framework_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_SKUS := cape
-DEVICE_MANIFEST_CAPE_FILES += $(COMMON_PATH)/manifest_cape.xml
+#DEVICE_MANIFEST_SKUS := cape
+#DEVICE_MANIFEST_CAPE_FILES += $(COMMON_PATH)/manifest_cape.xml
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
